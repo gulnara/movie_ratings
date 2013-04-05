@@ -5,6 +5,7 @@ from model import session as db_session, User, Rating, Movie
 app = Flask(__name__)
 
 
+
 @app.teardown_request
 def shutdown_session(exception = None):
     db_session.remove()

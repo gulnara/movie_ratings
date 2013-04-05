@@ -1,3 +1,2 @@
-Judgemental Eye: A Movie Rating App
-===================================
-Head on over to [the tutorial](http://chriszf.github.com/ratings) for instructions.
+This project was designed to build a movie rating system based on machine learning principles.
+

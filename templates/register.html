@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h2>Register</h2>
+<div id="new-user">
+	<form action="{{url_for("signup")}}" method="POST">
+		<div>
+			<label for="email">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </div>
+         <div>
+            <label for="age">Age</label>
+            <input type="number" name="age">
+        </div>
+         <div>
+            <label for="gender">Gender(F or M)</label>
+            <input type="text" name="gender">
+        </div>
+         <div>
+            <label for="occupation">Occupation</label>
+            <input type="text" name="occupation">
+        </div>
+         <div>
+            <label for="zipcode">Zipcode</label>
+            <input type="text" name="zipcode">
+        </div>
+        <input type="submit">
+		</div>
+	</form>
+</div>
+{% endblock %}

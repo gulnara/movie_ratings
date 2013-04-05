@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h2>Search for Movies</h2>
+<form action="{{url_for("search")}}" method="POST">
+	<input type="text" name="query">
+	<input type="submit">
+</form>
+<a href="{{url_for("logout")}}">Logout</a>
+{% endblock %}

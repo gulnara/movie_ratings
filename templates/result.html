@@ -1,7 +1,8 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h2>Search Result</h2>
+<div class="main">
+<h1>Search Results</h1>
 <ul>
 	{% for movie in movies %}
 	<li><div>
@@ -14,11 +15,12 @@
 
 	{% endfor %}
 </ul>
-
+<button class = "btn"><a href="{{url_for("my_ratings")}}">My Raitings</a></button>
 <h2>Search Again</h2>
-
-<form action="{{url_for("search")}}" method="POST">
-    <input type="text" name="query">
-    <input type="submit">
-</form>
+  		<form class="form-search" action="{{url_for("search")}}" method="POST">
+			<input type="text" name="query" class="input-block-level" placeholder="Name of the Movie">
+			<button class = "btn">Search</button>
+		</form>
+		<button class = "btn"><a href="{{url_for("logout")}}">Logout</a></button>
+</div>
 {% endblock %}

@@ -1,35 +1,48 @@
 {% extends "layout.html" %}
 
 {% block body %}
-<h2>Register</h2>
+
 <div id="new-user">
-	<form action="{{url_for("signup")}}" method="POST">
+	<form class="form-register" action="{{url_for("signup")}}" method="POST">
+        <h2 class="form-register-heading">Please Register</h2>
 		<div>
-			<label for="email">Email</label>
-            <input type="text" name="email">
+			<label for="email"></label>
+            <input type="text" name="email" class="input-block-level" placeholder="Email address">
         </div>
         <div>
-            <label for="password">Password</label>
-            <input type="password" name="password">
+            <label for="password"></label>
+            <input type="password" name="password"class="input-block-level" placeholder="Password">
         </div>
          <div>
-            <label for="age">Age</label>
-            <input type="number" name="age">
+            <label for="age"></label>
+            <input type="text" name="age" class="input-block-level" placeholder="Age">
         </div>
          <div>
-            <label for="gender">Gender(F or M)</label>
-            <input type="text" name="gender">
+            <label for="gender"></label>
+            <input type="text" name="gender" class="input-block-level" placeholder="Gender F/M">
         </div>
          <div>
-            <label for="occupation">Occupation</label>
-            <input type="text" name="occupation">
+            <label for="occupation"></label>
+            <input type="text" name="occupation" class="input-block-level" placeholder="Occupation">
         </div>
          <div>
-            <label for="zipcode">Zipcode</label>
-            <input type="text" name="zipcode">
+            <label for="zipcode"></label>
+            <input type="text" name="zipcode" class="input-block-level" placeholder="Zipcode">
         </div>
-        <input type="submit">
+        <button class="btn btn-medium btn-primary" type="submit">Register</button>
 		</div>
 	</form>
 </div>
 {% endblock %}
+
+
+        <div>
+            <label for="email"></label>
+            <input type="text" name="email" class="input-block-level" placeholder="Email address">
+        </div>
+        <div>
+            <label for="password"></label>
+            <input type="password" name="password" class="input-block-level" placeholder="Password">
+        </div>
+         <button class="btn btn-medium btn-primary" type="submit">Sign in</button>
+    </form>

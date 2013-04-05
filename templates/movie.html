@@ -1,14 +1,15 @@
 {% extends "layout.html" %}
 {% block body %}
-<h2>{{movie.name}} &mdash; {{movie.released_at.year}}</h2>
-<h3> Average rating: {{ "%.2f"%average }}</h3>
+<div class="main">
+<h1>{{movie.name}} &mdash; {{movie.released_at.year}}</h1>
+<h2> Average rating: {{ "%.2f"%average }}</h2>
 
 
-<a href="{{movie.imdb_url}}">IMDB Details</a>
+<button class = "btn"><a href="{{movie.imdb_url}}">IMDB Details</a></button>
 {% if user_rating %}
-<h3>Your rating: {{ user_rating.rating }}</h3>
+<h2>Your rating: {{ user_rating.rating }}</h2>
 {% elif prediction %}
-<h3>We predict you will rate this movie {{ prediction }}.</h3>
+<h2>We predict you will rate this movie {{ prediction }}.</h2>
 {% endif %}
 <h2>Rate this movie</h2>
 <form action="{{url_for('rate_movie', id=movie.id)}}" method="post">
@@ -20,8 +21,10 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <input type="submit">
+    <button class="btn btn-medium btn-primary" type="submit">Submit</button>
 </form>
-
+<button class = "btn"><a href="{{url_for("my_ratings")}}">My Raitings</a></button>
+<button class = "btn"><a href="{{url_for("logout")}}">Logout</a></button>
+</div>
 
 {% endblock %}

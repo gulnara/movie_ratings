@@ -1,9 +1,17 @@
 {% extends 'layout.html' %}
 {% block body %}
-<h2>Search for Movies</h2>
-<form action="{{url_for("search")}}" method="POST">
-	<input type="text" name="query">
-	<input type="submit">
-</form>
-<a href="{{url_for("logout")}}">Logout</a>
+
+<div class="row">
+ 	<div class="main">
+  		<h1>Search for Movies</h1>
+  		<form class="form-search" action="{{url_for("search")}}" method="POST">
+			<input type="text" name="query" class="input-block-level" placeholder="Name of the Movie">
+			<button class = "btn">Search</button>
+		</form>
+		<button class = "btn"><a href="{{url_for("my_ratings")}}">My Raitings</a></button>
+		<button class = "btn"><a href="{{url_for("logout")}}">Logout</a></button>
+	</div>
+</div>
+
+
 {% endblock %}

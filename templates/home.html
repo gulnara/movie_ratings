@@ -2,9 +2,13 @@
 
 {% block body %}
 
-<a href="{{url_for("login")}}">Login</a>
-<a href="{{url_for("register")}}">Sign Up!</a>
-<a href="{{url_for("search")}}">Search for movie ratings</a>
+<div class="main">
+<h1>Movie Ratings</h1>
+
+
+<button class = "btn"><a href="{{url_for("login")}}">Login</a></button>
+<button class = "btn"><a href="{{url_for("register")}}">Sign Up!</a></button>
+</div>
 
 
 {% endblock %}

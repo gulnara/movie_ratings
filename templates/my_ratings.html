@@ -1,6 +1,6 @@
 {% extends 'layout.html' %}
 {% block body %}
-
+<div class="main">
 <h2>My Ratings</h2>
 <ul>
 	{% for rating in ratings %}
@@ -10,4 +10,7 @@
 	<li>You haven't rated anything yet!</li>
 	{% endfor %}
 </ul>
+<button class = "btn"><a href="{{url_for("search")}}">Search Movies</a></button>
+<button class = "btn"><a href="{{url_for("logout")}}">Logout</a></button>
+</div>
 {% endblock %}

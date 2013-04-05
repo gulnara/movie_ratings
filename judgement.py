@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, request, url_for, session, flash, g
 import model
 from model import session as db_session, User, Rating, Movie
+import os
 
 app = Flask(__name__)
 

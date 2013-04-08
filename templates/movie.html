@@ -9,7 +9,7 @@
 {% if user_rating %}
 <h2>Your rating: {{ user_rating.rating }}</h2>
 {% elif prediction %}
-<h2>We predict you will rate this movie {{ prediction }}.</h2>
+<h2>We predict you will rate this movie {{ "%.2f"%prediction }} out of 5.</h2>
 {% endif %}
 <h2>Rate this movie</h2>
 <form action="{{url_for('rate_movie', id=movie.id)}}" method="post">
